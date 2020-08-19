@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { RoomComponent } from './room/room.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RoomComponent } from './room/room.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    RoomComponent
+    RoomComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
