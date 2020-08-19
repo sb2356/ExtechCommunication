@@ -354,38 +354,73 @@
   </style>
 </head>
 <body>
-  <div id="ui-container">
+
+  <div *ngIf="!signedIn">
+
+    <div>
+      <div class="text-center">
+
+        <h1 class="font-weight-bold theme-primary-text">Join Chat Room</h1>
+      </div>
+
+      <div class="col-sm-12">
+
+        <input class="form-control" type="text" placeholder="Full Name *" />
+
+      </div>
+
+      <div class="col-sm-12 pl-3 pr-3">
+
+        <div class="d-flex align-items-center mt-1 mb-5">
+          <div style="margin:0 auto;">
+            <button class="td-modal-btn-save  mt-1 mb-10" style="display:inline-block" (click)="submit()"> Continue </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div *ngIf="signedIn" id="ui-container">
     <div id="ui-local">
       <p>Loading your video feed…</p>
     </div>
     <div id="ui-alone"></div>
     <div id="ui-controller">
-      <div (click)="toggleVideo()"
-           class="ui-controller-control">
-        <p *ngIf="!toggleVideoFlag" style="color:#ff3b30">Camera Off</p>
-        <i *ngIf="!toggleVideoFlag" class="material-icons">videocam_off </i>
-        <p *ngIf="toggleVideoFlag">Camera On</p>
-        <i *ngIf="toggleVideoFlag" class="material-icons">videocam</i>
 
-      </div>
-      <div (click)="toggleMic()"
-           class="ui-controller-control">
-        <p *ngIf="toggleMicFlag">Microphone On</p>
-        <i *ngIf="toggleMicFlag" class="material-icons">mic </i>
-        <p *ngIf="!toggleMicFlag" style="color:#ff3b30">Microphone Off</p>
-        <i *ngIf="!toggleMicFlag" class="material-icons">mic_off</i>
-      </div>
-      <div (click)="toggleScreenShare()" class="ui-controller-control">
-        <p *ngIf="toggleScreenShareFlag" id="screenshare-label">Start screen share</p>
-        <i *ngIf="toggleScreenShareFlag" class="material-icons">screen_share </i>
-        <p *ngIf="!toggleScreenShareFlag" id="screenshare-label" style="color:#ff3b30">Stop screen share</p>
-        <i *ngIf="!toggleScreenShareFlag" class="material-icons">stop_screen_share </i>
-      </div>
-      <div (click)="initiateCall()" id="leave-call-div" class="ui-controller-control">
-        <p *ngIf="!initiateCallFlag" id="leave-call-label" style="color:#ff3b30">End call</p>
-        <i *ngIf="!initiateCallFlag" class="material-icons">call_end </i>
-        <p *ngIf="initiateCallFlag" id="leave-call-label">Start call</p>
-        <i *ngIf="initiateCallFlag" class="material-icons">call </i>
+
+
+      <div >
+        <div (click)="toggleVideo()"
+             class="ui-controller-control">
+          <p *ngIf="!toggleVideoFlag" style="color:#ff3b30">Camera Off</p>
+          <i *ngIf="!toggleVideoFlag" class="material-icons">videocam_off </i>
+          <p *ngIf="toggleVideoFlag">Camera On</p>
+          <i *ngIf="toggleVideoFlag" class="material-icons">videocam</i>
+
+        </div>
+        <div (click)="toggleMic()"
+             class="ui-controller-control">
+          <p *ngIf="toggleMicFlag">Microphone On</p>
+          <i *ngIf="toggleMicFlag" class="material-icons">mic </i>
+          <p *ngIf="!toggleMicFlag" style="color:#ff3b30">Microphone Off</p>
+          <i *ngIf="!toggleMicFlag" class="material-icons">mic_off</i>
+        </div>
+        <div (click)="toggleScreenShare()" class="ui-controller-control">
+          <p *ngIf="toggleScreenShareFlag" id="screenshare-label">Start screen share</p>
+          <i *ngIf="toggleScreenShareFlag" class="material-icons">screen_share </i>
+          <p *ngIf="!toggleScreenShareFlag" id="screenshare-label" style="color:#ff3b30">Stop screen share</p>
+          <i *ngIf="!toggleScreenShareFlag" class="material-icons">stop_screen_share </i>
+        </div>
+        <div (click)="initiateCall()" id="leave-call-div" class="ui-controller-control">
+          <p *ngIf="!initiateCallFlag" id="leave-call-label" style="color:#ff3b30">End call</p>
+          <i *ngIf="!initiateCallFlag" class="material-icons">call_end </i>
+          <p *ngIf="initiateCallFlag" id="leave-call-label">Start call</p>
+          <i *ngIf="initiateCallFlag" class="material-icons">call </i>
+        </div>
+
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ export class CounterComponent {
   toggleMicFlag: boolean = true;
   toggleScreenShareFlag: boolean = true;
   initiateCallFlag: boolean = false;
+  signedIn: boolean = false;
 
   toggleVideo() {
 
@@ -52,6 +53,9 @@ export class CounterComponent {
 
   }
 
+  submit() {
+    this.signedIn = true;
+  }
 
 
 }

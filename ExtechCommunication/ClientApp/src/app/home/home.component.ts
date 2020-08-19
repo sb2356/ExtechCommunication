@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class HomeComponent {
   constructor() { }
-  link: any = 'https://localhost:44350/room'
+  link: any = 'https://localhost:44350/video'
 
   copyMessage(val: string) {
     const selBox = document.createElement('textarea');
