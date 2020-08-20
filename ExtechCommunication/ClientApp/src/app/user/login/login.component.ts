@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loginModel.userName = 'extechideas';
     this.successUnSubscribe$ = this.userService.successSubject.subscribe(success => {
       if (success) {
         this.router.navigate(['dashboard']);
