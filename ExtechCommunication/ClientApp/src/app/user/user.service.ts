@@ -127,7 +127,7 @@ export class UserService implements CanActivate {
       QB.init(QBconfig.credentials.appId, QBconfig.credentials.authKey, QBconfig.credentials.authSecret, QBconfig.appConfig);
       const user = {
         login: loginPayload.userLogin,
-        password: 'quickblox',
+        password: 'extechideas',
         full_name: loginPayload.userName
       };
       const loginSuccess = (loginRes) => {
