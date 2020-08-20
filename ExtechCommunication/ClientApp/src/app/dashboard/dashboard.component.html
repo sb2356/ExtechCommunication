@@ -17,10 +17,10 @@
           <li class="sidebar__tab">
             <a (click)="getChatList('chat')" [class.active]="chatsClicked" class="sidebar__tab_link" target="_blank">chats</a>
           </li>
-          <li class="sidebar__tab">
+          <!--<li class="sidebar__tab">
             <a (click)="getChatList('publicChats')" [class.active]="publicChatClicked"
                class="sidebar__tab_link j-sidebar__tab_link" target="_blank">public chats</a>
-          </li>
+          </li>-->
           <li class="sidebar__tab m-sidebar__tab_new">
             <a (click)="createNewGroup()" [class.active]="createGroupClicked"
                class="sidebar__tab_link j-sidebar__create_dialog m-sidebar__tab_link_new"
@@ -68,7 +68,7 @@
     <div class="notifications j-notifications hidden"></div>
     <div class="content__inner j-content__inner">
       <div class="welcome__message">
-        <p>Please select you opponent to start chatting.</p>
+        <p>Select user to chat.</p>
       </div>
     </div>
   </div>
