@@ -20,7 +20,7 @@ export const QBconfig = {
 
 export const CONSTANTS = {
   DIALOG_TYPES: {
-    CHAT: 3,
+    CHAT: 2,
     GROUPCHAT: 2,
     PUBLICCHAT: 1
   },

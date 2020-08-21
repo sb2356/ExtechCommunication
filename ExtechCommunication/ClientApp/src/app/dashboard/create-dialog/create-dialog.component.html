@@ -27,10 +27,10 @@
   </div>
   <form action="" (ngSubmit)="onSubmit()" class="dialog_form m-dialog_form_create j-create_dialog_form"
         name="create_dialog">
-    <input [(ngModel)]="messageField" [disabled]="selectedUsers.length < 1" autocapitalize="off" autocomplete="off" autocorrect="off"
+    <input [(ngModel)]="messageField" [disabled]="selectedUsers.length < 3" autocapitalize="off" autocomplete="off" autocorrect="off"
            class="dialog_name"
            name="dialog_name" placeholder="Add conversation name" type="text">
-    <button [disabled]="selectedUsers.length < 1" class="btn m-create_dialog_btn j-create_dialog_btn"
+    <button [disabled]="selectedUsers.length < 2" class="btn m-create_dialog_btn j-create_dialog_btn"
             name="create_dialog_submit"
             type="submit">create
     </button>
